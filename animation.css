@@ -36,3 +36,38 @@
         left: 20%;
     }
 }
+@keyframes mermaids {
+    to{
+
+        bottom: 120%;
+    }
+
+}
+@keyframes mermaid {
+    29%{
+        z-index: 5;
+    }
+    30% {
+        z-index: 1;
+        left: 20%;
+        bottom: 5%;
+    }
+    60% {
+        left: 50%;
+        bottom: 20%;
+    }
+    90% {
+        z-index: 3;
+        left: 70%;
+        bottom: 10%;
+    }
+}
+@keyframes music {
+    from{
+        transform: rotate(-2deg);
+    }
+    to {
+        transform: rotate(2deg);
+    }
+
+}

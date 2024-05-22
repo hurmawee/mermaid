@@ -78,8 +78,9 @@
 }
 .mainEl{
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 10%;
     justify-content: space-around;
+    overflow: clip;
 }
 .textFrame{
     margin-block: 10vh 10vh;
@@ -87,6 +88,7 @@
     font: 300 clamp(32pt,50%,64pt)/1.7 "Inter";
     text-align: justify;
     letter-spacing: 0.05em;
+
 }
 .image{
     position: relative;
@@ -175,7 +177,7 @@
 }
 .cloud1, .cloud2, .cloud3, .cloud4{
     position: absolute;
-
+    animation-duration: 5s;
     animation-direction: alternate;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
@@ -183,29 +185,111 @@
 }
 .cloud1{
     animation-name: cloudLeft;
-    animation-duration: 2s;
+
     left: 20%;
     top: 10%;
 }
 .cloud2{
     animation-name: cloudRight;
-    animation-duration: 2s;
+
     left: 80%;
     top: 10%;
 }
 .cloud3{
     animation-name: cloudLeft;
-    animation-duration: 2s;
+
     left: 30%;
     top: 10%;
 }
 .cloud4{
     animation-name: cloudRight;
-    animation-duration: 2s;
+
     left: 70%;
     top: 10%;
 }
+.mermaids{
+    animation-name: mermaids;
 
+
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    view-timeline-name: --mermaids;
+    animation-timeline: --mermaids;
+    animation-range: 30% 100%;
+
+    position: absolute;
+    width: 7%;
+    bottom: -20%;
+}
+.mermaid1{
+    left: 20%;
+
+    transform: rotate(5deg);
+}
+.mermaid2{
+    left: 40%;
+
+    transform: rotate(5deg);
+}
+.mermaid3{
+    right: 40%;
+
+    transform: rotate(-5deg);
+}
+.mermaid4{
+    right:  20%;
+
+    transform: rotate(-5deg);
+}
+.people{
+    position: absolute;
+    width: 10%;
+}
+.prince{
+    z-index: 2;
+    left: 30%;
+    bottom: 10%;
+}
+.mermaid{
+    animation-name: mermaid;
+    animation-timing-function: ease-in;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+
+    z-index: 5;
+    width: 15%;
+    left: 70%;
+    bottom: 10%;
+}
+.mus1{
+    left: 20%;
+    bottom: 17%;
+}
+.mus2{
+    width: 8%;
+    right: 20%;
+    bottom: 15%;
+}
+.mus3{
+    width: 8%;
+    right: 8%;
+    bottom: 10%;
+}
+.mus4{
+    left: 8%;
+    bottom: 8%;
+}
+.mus{
+    animation-name: music;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.prince{
+    animation-direction: alternate-reverse;
+}
 .leftDecoration, .rightDecoration{
     width: 10%;
     display: flex;
