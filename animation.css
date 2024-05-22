@@ -1,0 +1,38 @@
+@keyframes progress {
+    to {
+        width: 100%;
+    }
+}
+@keyframes color {
+    to {
+        color: white;
+    }
+}
+@keyframes leftToRight {
+    to {
+        left: 80%
+    }
+}
+@keyframes rightToLeft {
+    to{
+        right: 80%;
+    }
+}
+@keyframes ship {
+    from {
+        transform: rotate(-10deg);
+    }
+    to {
+        transform: rotate(10deg);
+    }
+}
+@keyframes cloudLeft {
+    to{
+        left: 80%;
+    }
+}
+@keyframes cloudRight {
+    to{
+        left: 20%;
+    }
+}
