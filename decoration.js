@@ -3,7 +3,6 @@ const rightD = document.querySelector(".rightDecoration");
 const textF = document.querySelector(".textFrame")
 
 let arrayDec = ["dec1.svg","dec2.svg","dec3.svg","dec4.svg","dec5.svg","dec6.svg"];
-console.log(textF.offsetHeight)
 const numberEl = +textF.offsetHeight / 162 + 1;
 
 

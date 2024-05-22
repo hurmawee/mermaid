@@ -1,6 +1,39 @@
 :root{
     --font-family: "Inter", sans-serif;
 }
+@keyframes progress {
+    to {
+        width: 100%;
+    }
+}
+@keyframes color {
+    to {
+        color: white;
+    }
+}
+@keyframes leftToRight {
+    to {
+        left: 80%
+    }
+}
+@keyframes rightToLeft {
+    to{
+        right: 80%;
+    }
+}
+.progressBar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 10px;
+    background-color: #626262;
+    border-radius: 0 10px 10px 0;
+
+    animation-name: progress;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -18,34 +51,98 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-
-
 }
 .firstScreen h1, .firstScreen h2{
-
-    transition: font-size 1s ease-in;
+    animation-name: color;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 .firstScreen h1 {
-    font: 700 16em var(--font-family);
+    font: 700 clamp(120pt, 70%, 256pt) var(--font-family);
     user-select: none;
-    color: white;
+    color: #171717;
+    margin: 0;
 }
 .firstScreen h2{
     font: 300 3em var(--font-family);
     user-select: none;
-    color: white;
+    color: #171717;
+    margin: 0;
 }
 .mainEl{
     display: flex;
-
+    margin: 0 auto;
     justify-content: space-around;
 }
 .textFrame{
     margin-block: 10vh 10vh;
     width: 60%;
-    font: 300 1em/1.7 "Inter";
+    font: 300 clamp(32pt,50%,64pt)/1.7 "Inter";
     text-align: justify;
     letter-spacing: 0.05em;
+}
+.castle{
+    position: relative;
+    width: 100%;
+    margin-block: 5% 5%;
+    overflow: clip;
+
+}
+.castle-fish{
+    position: absolute;
+    width: 7%;
+}
+.fish1{
+    transform: scale(-1, 1);
+    left: -10%;
+    top: 50px;
+    animation-name: leftToRight;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    view-timeline-name: --left-to-right;
+    animation-timeline: --left-to-right;
+    animation-range: 0% 100%;
+
+
+}
+.fish2{
+    right: -10%;
+    bottom: 10px;
+    animation-name: rightToLeft;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    view-timeline-name: --right-to-left;
+    animation-timeline: --right-to-left;
+    animation-range: 0% 100%;
+
+}
+.fish3{
+    transform: scale(-1, 1);
+    left: -10%;
+    bottom: 50px;
+    animation-name: leftToRight;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    view-timeline-name: --left-to-right;
+    animation-timeline: --left-to-right;
+    animation-range: 0% 100%;
+
+}
+.fish4 {
+    right: -10%;
+    top: 10px;
+    animation-name: rightToLeft;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    view-timeline-name: --right-to-left;
+    animation-timeline: --right-to-left;
+    animation-range: 0% 100%;
+
 }
 
 .leftDecoration, .rightDecoration{
